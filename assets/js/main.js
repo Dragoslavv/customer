@@ -1,6 +1,5 @@
-$.noConflict();
 
-jQuery(document).ready(function($) {
+$(document).ready(function() {
 
 	"use strict";
 
@@ -33,6 +32,8 @@ jQuery(document).ready(function($) {
 	// 	$('.user-menu').parent().removeClass('open');
 	// 	$('.user-menu').parent().toggleClass('open');
 	// });
+
+
 
 
 });

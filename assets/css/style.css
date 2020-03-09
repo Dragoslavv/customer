@@ -910,16 +910,16 @@
       background: #a0cf3c; }
 
 .bg-flat-color-1 {
-  background: #20a8d8; }
+  background: #272c33; }
 
 .bg-flat-color-2 {
-  background: #63c2de; }
+  background: #272c33; }
 
 .bg-flat-color-3 {
-  background: #ffc107; }
+  background: #272c33; }
 
 .bg-flat-color-4 {
-  background: #f86c6b; }
+  background: #272c33; }
 
 .bg-flat-color-5 {
   background: #4dbd74; }
@@ -1551,13 +1551,20 @@ header .form-inline {
   float: left;
   padding: 0 20px;
   width: 100%; }
-
+.text-light{
+  color: #c8c9ce !important;
+  font-weight: 800;
+  font-size: 21px;
+}
+}
 .card {
   margin-bottom:24px;
   margin-bottom: 1.5rem;
   border-radius: 0; }
   .card h4 {
     font-size:17.6px;
+    color: #e74c3c;
+    font-family: -webkit-pictograph;
     font-size: 1.1rem; }
   .card .user-header .media img {
     border: 5px solid rgba(255, 255, 255, 0.3);
@@ -1661,6 +1668,14 @@ header .form-inline {
   right: 0;
   top: 0;
   font-size: 20px; }
+
+.login-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  display: block;
+  box-shadow: 15px 10px 41px -13px rgba(0,0,0,0.81);
+}
 
 .corner-ribon i {
   padding: 10px 0 0 35px;
@@ -2291,6 +2306,12 @@ header .form-inline {
   color: #ffffff !important;
   opacity: 0.75;
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; }
+
+
+/* Login form */
+.hidden-error{
+  display: none;
+}
 
 /* Mixed Styles */
 .badges h1,
