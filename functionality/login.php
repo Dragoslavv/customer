@@ -49,6 +49,9 @@ echo $retVal;
 if(isset($_SESSION['tokenSession']) ){
     $token = json_decode($retVal, true);
 
+    session_set_cookie_params ( $token['expires_in'] );
+    setcookie( "customers",$token["access_token"],time() + $token['expires_in'] );
+
     array_push($_SESSION['tokenSession'],$token["access_token"]);
 
 }

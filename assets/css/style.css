@@ -2391,6 +2391,13 @@ header .form-inline {
       top: 0.75rem;
       position: absolute; } }
 
+@media (min-width: 992px) {
+    .social-box ul li span {
+        font-size: 11px !important;
+    }
+}
+
+
 @media (max-width: 992px) {
   [class*="col"].no-padding {
     -webkit-box-flex: 0;
@@ -2398,6 +2405,7 @@ header .form-inline {
             flex: none; } }
 
 @media (max-width: 575.99px) {
+
   body {
     display: block; }
   aside.left-panel {
