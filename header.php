@@ -20,7 +20,7 @@ if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="images/globaltel_circles_original.png">
 
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
@@ -57,9 +57,9 @@ if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
                 <li class="active">
                     <a href="index.php"> <i class="menu-icon fa fa-home"></i>Home </a>
                 </li>
-                <h3 class="menu-title">Business lists</h3>
-                <li class="menu-item-has-children dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Customers</a>
+<!--                <h3 class="menu-title">Business lists</h3>-->
+<!--                <li class="menu-item-has-children dropdown">-->
+<!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Customers</a>-->
 <!--                    <ul class="sub-menu children dropdown-menu">-->
 <!--                        <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>-->
 <!--                        <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Badges</a></li>-->
@@ -73,7 +73,7 @@ if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
 <!--                        <li><i class="fa fa-th"></i><a href="ui-grids.html">Grids</a></li>-->
 <!--                        <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Typography</a></li>-->
 <!--                    </ul>-->
-                </li>
+<!--                </li>-->
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Lists</a>
                     <ul class="sub-menu children dropdown-menu">
@@ -110,7 +110,7 @@ if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
                     </a>
 
                     <div class="user-menu dropdown-menu">
-                        <a class="nav-link" href="#"><i class="fa fa-user"></i> <?php echo $_SESSION['username'][0]  ?></a>
+                        <a class="nav-link" id="customers" href="#"><i class="fa fa-user"></i> </a>
 
                         <a class="nav-link" id="logout" href="#"><i class="fa fa-power-off"></i> Logout</a>
                     </div>

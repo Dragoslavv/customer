@@ -1,4 +1,33 @@
-<?php require_once 'header.php'; ?>
+<?php require_once 'header.php';
+$url = 'http://10.245.208.5:8008/api/getpostpaid';
+
+$headers = array(
+    'Content-Type: application/json',
+    'Access-Control-Allow-Origin: *',
+    'Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS',
+
+    sprintf('Authorization: Bearer %s', $_SESSION['tokenSession'][0])
+);
+
+$curl = curl_init($url);
+
+curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+$responseFromApi = curl_exec($curl);
+$httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+
+if (curl_errno($curl)) {
+    $retVal = array("result"=>false);
+} else {
+    $retVal = $responseFromApi;
+}
+
+curl_close($curl);
+
+
+?>
         <div class="breadcrumbs">
             <div class="col-sm-4">
                 <div class="page-header float-left">
@@ -23,19 +52,18 @@
         <div class="content mt-3">
             <div class="animated fadeIn">
                 <div class="row">
-                    <input type="hidden" id="company_id" value="<?php  echo $_SESSION['customer_code'][0];   ?>">
-
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Customer</strong>
                             </div>
                             <div class="card-body">
-                                <table id="lists-customer" class="table table-striped table-bordered">
+                                <table id="lists-customer" class="table table-striped table-bordered" style="width:100% !important;">
                                     <thead>
                                         <tr>
-                                            <th>Company Name</th>
+                                            <th>User ID</th>
                                             <th>Customer Number</th>
+                                            <th>PDF</th>
                                         </tr>
                                     </thead>
 
@@ -73,26 +101,6 @@
     <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
     <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
     <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
-
-    <script>
-        $(document).ready(function() {
-
-            // $("#lists-customer").DataTable({
-            //     "info":false,
-            //     "responsive": true,
-            //     "columns": [
-            //         { "data": "name" },
-            //         { "data": "user_id" }
-            //     ],
-            //     "ajax": {
-            //         "url": "functionality/all-number.php,
-            //         "type": "POST"
-            //     }
-            //
-            // });
-        });
-    </script>
-
 
 </body>
 

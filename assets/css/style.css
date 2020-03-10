@@ -1651,6 +1651,12 @@ header .form-inline {
 .social-buttons .social i {
   padding: 0 10px;
   width: inherit !important; }
+#lists-customer{
+  width: 100% !important;
+}
+.test{
+  word-break: break-all;
+}
 
 .social-buttons .only-text p button {
   padding:0 8px;
